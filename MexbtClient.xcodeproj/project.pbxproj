@@ -1,0 +1,384 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B82CB21C1B62180700A5C14E /* MexbtClient.h in Headers */ = {isa = PBXBuildFile; fileRef = B82CB21B1B62180700A5C14E /* MexbtClient.h */; };
+		B82CB21E1B62180700A5C14E /* MexbtClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B82CB21D1B62180700A5C14E /* MexbtClient.m */; };
+		B82CB2241B62180700A5C14E /* libMexbtClient.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B82CB2181B62180700A5C14E /* libMexbtClient.dylib */; };
+		B82CB23A1B621A2800A5C14E /* MexbtClientTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B82CB2391B621A2800A5C14E /* MexbtClientTest.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B82CB2251B62180700A5C14E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B82CB2101B62180700A5C14E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B82CB2171B62180700A5C14E;
+			remoteInfo = MexbtClient;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B82CB2181B62180700A5C14E /* libMexbtClient.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libMexbtClient.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		B82CB21B1B62180700A5C14E /* MexbtClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MexbtClient.h; sourceTree = "<group>"; };
+		B82CB21D1B62180700A5C14E /* MexbtClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MexbtClient.m; sourceTree = "<group>"; };
+		B82CB2231B62180700A5C14E /* MexbtClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MexbtClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B82CB2291B62180700A5C14E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B82CB2391B621A2800A5C14E /* MexbtClientTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MexbtClientTest.m; sourceTree = "<group>"; };
+		B8779F201B65421800FE19E6 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B82CB2151B62180700A5C14E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B82CB2201B62180700A5C14E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B82CB2241B62180700A5C14E /* libMexbtClient.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B82CB20F1B62180700A5C14E = {
+			isa = PBXGroup;
+			children = (
+				B8779F201B65421800FE19E6 /* .travis.yml */,
+				B82CB21A1B62180700A5C14E /* MexbtClient */,
+				B82CB2271B62180700A5C14E /* MexbtClientTests */,
+				B82CB2191B62180700A5C14E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B82CB2191B62180700A5C14E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B82CB2181B62180700A5C14E /* libMexbtClient.dylib */,
+				B82CB2231B62180700A5C14E /* MexbtClientTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B82CB21A1B62180700A5C14E /* MexbtClient */ = {
+			isa = PBXGroup;
+			children = (
+				B82CB21B1B62180700A5C14E /* MexbtClient.h */,
+				B82CB21D1B62180700A5C14E /* MexbtClient.m */,
+			);
+			path = MexbtClient;
+			sourceTree = "<group>";
+		};
+		B82CB2271B62180700A5C14E /* MexbtClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				B82CB2281B62180700A5C14E /* Supporting Files */,
+				B82CB2391B621A2800A5C14E /* MexbtClientTest.m */,
+			);
+			path = MexbtClientTests;
+			sourceTree = "<group>";
+		};
+		B82CB2281B62180700A5C14E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B82CB2291B62180700A5C14E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B82CB2161B62180700A5C14E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B82CB21C1B62180700A5C14E /* MexbtClient.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		B82CB2171B62180700A5C14E /* MexbtClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B82CB22C1B62180700A5C14E /* Build configuration list for PBXNativeTarget "MexbtClient" */;
+			buildPhases = (
+				B82CB2141B62180700A5C14E /* Sources */,
+				B82CB2151B62180700A5C14E /* Frameworks */,
+				B82CB2161B62180700A5C14E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MexbtClient;
+			productName = MexbtClient;
+			productReference = B82CB2181B62180700A5C14E /* libMexbtClient.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		B82CB2221B62180700A5C14E /* MexbtClientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B82CB22F1B62180700A5C14E /* Build configuration list for PBXNativeTarget "MexbtClientTests" */;
+			buildPhases = (
+				B82CB21F1B62180700A5C14E /* Sources */,
+				B82CB2201B62180700A5C14E /* Frameworks */,
+				B82CB2211B62180700A5C14E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B82CB2261B62180700A5C14E /* PBXTargetDependency */,
+			);
+			name = MexbtClientTests;
+			productName = MexbtClientTests;
+			productReference = B82CB2231B62180700A5C14E /* MexbtClientTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B82CB2101B62180700A5C14E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Abdullah Alansari";
+				TargetAttributes = {
+					B82CB2171B62180700A5C14E = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					B82CB2221B62180700A5C14E = {
+						CreatedOnToolsVersion = 6.4;
+					};
+				};
+			};
+			buildConfigurationList = B82CB2131B62180700A5C14E /* Build configuration list for PBXProject "MexbtClient" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B82CB20F1B62180700A5C14E;
+			productRefGroup = B82CB2191B62180700A5C14E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B82CB2171B62180700A5C14E /* MexbtClient */,
+				B82CB2221B62180700A5C14E /* MexbtClientTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B82CB2211B62180700A5C14E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B82CB2141B62180700A5C14E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B82CB21E1B62180700A5C14E /* MexbtClient.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B82CB21F1B62180700A5C14E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B82CB23A1B621A2800A5C14E /* MexbtClientTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B82CB2261B62180700A5C14E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B82CB2171B62180700A5C14E /* MexbtClient */;
+			targetProxy = B82CB2251B62180700A5C14E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B82CB22A1B62180700A5C14E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B82CB22B1B62180700A5C14E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		B82CB22D1B62180700A5C14E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B82CB22E1B62180700A5C14E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B82CB2301B62180700A5C14E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MexbtClientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B82CB2311B62180700A5C14E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MexbtClientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B82CB2131B62180700A5C14E /* Build configuration list for PBXProject "MexbtClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B82CB22A1B62180700A5C14E /* Debug */,
+				B82CB22B1B62180700A5C14E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B82CB22C1B62180700A5C14E /* Build configuration list for PBXNativeTarget "MexbtClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B82CB22D1B62180700A5C14E /* Debug */,
+				B82CB22E1B62180700A5C14E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B82CB22F1B62180700A5C14E /* Build configuration list for PBXNativeTarget "MexbtClientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B82CB2301B62180700A5C14E /* Debug */,
+				B82CB2311B62180700A5C14E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B82CB2101B62180700A5C14E /* Project object */;
+}
