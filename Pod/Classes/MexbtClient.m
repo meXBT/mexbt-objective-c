@@ -1,9 +1,9 @@
 //
 //  MexbtClient.m
-//  MexbtClient
+//  Pods
 //
 //  Created by Abdullah Alansari on 7/24/15.
-//  Copyright (c) 2015 Abdullah Alansari. All rights reserved.
+//
 //
 
 #import "MexbtClient.h"
@@ -70,7 +70,7 @@
 }
 
 - (NSDictionary *) accountTrades:(NSString *)ins startIndex:(NSInteger)startIndex count:(NSUInteger)count {
-
+    
     return [self privateRequest:@"trades"
                             req:@{@"ins": ins,
                                   @"startIndex": [NSNumber numberWithInteger:startIndex],
@@ -119,9 +119,9 @@
 }
 
 - (NSDictionary *) privateRequest:(NSString *)endpoint req:(NSDictionary *)req {
-
+    
     NSString *baseUrl = self.isSandbox ? @"https://private-api-sandbox.mexbt.com/v1/"
-                                       : @"https://private-api.mexbt.com/v1/";
+    : @"https://private-api.mexbt.com/v1/";
     
     NSString *url = [baseUrl stringByAppendingString:endpoint];
     
@@ -129,8 +129,8 @@
 }
 
 - (NSDictionary *) sign:(NSDictionary *)req {
-
-    long nonce = (long long)([[NSDate date] timeIntervalSince1970] * 1000.0);
+    
+    long nonce = (long)([[NSDate date] timeIntervalSince1970] * 1000.0);
     
     NSString *message = [[NSString alloc] initWithFormat:@"%ld%@%@",nonce,self.userId,self.publicKey];
     
@@ -161,7 +161,7 @@
 }
 
 + (NSDictionary *) trades:(NSString *)ins startIndex:(NSInteger)startIndex count:(NSUInteger)count {
-
+    
     return [MexbtClient publicRequest:@"trades"
                                   req:@{@"ins": ins,
                                         @"startIndex": [NSNumber numberWithInteger:startIndex],
@@ -169,7 +169,7 @@
 }
 
 + (NSDictionary *) tradesByDate:(NSString *)ins startDate:(NSUInteger)startDate endDate:(NSUInteger)endDate {
-
+    
     return [MexbtClient publicRequest:@"trades-by-date"
                                   req:@{@"ins": ins,
                                         @"startDate": [NSNumber numberWithUnsignedInteger:startDate],
@@ -186,13 +186,13 @@
 }
 
 + (NSDictionary *)publicRequest:(NSString *)endpoint req:(NSDictionary *)req {
-
+    
     NSString *url = [@"https://public-api.mexbt.com/v1/" stringByAppendingString:endpoint];
     return [MexbtClient url:url req:req];
 }
 
 + (NSDictionary *)url:(NSString *)url req:(NSDictionary *)req {
-
+    
     NSError *error = [[NSError alloc] init];
     NSData *postData = [NSJSONSerialization dataWithJSONObject:req options:0 error:&error];
     

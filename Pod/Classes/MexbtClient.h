@@ -1,9 +1,9 @@
 //
 //  MexbtClient.h
-//  MexbtClient
+//  Pods
 //
 //  Created by Abdullah Alansari on 7/24/15.
-//  Copyright (c) 2015 Abdullah Alansari. All rights reserved.
+//
 //
 
 #import <Foundation/Foundation.h>

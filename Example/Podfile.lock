@@ -1,0 +1,20 @@
+PODS:
+  - Expecta (1.0.2)
+  - MexbtClient (0.1.0)
+  - Specta (1.0.3)
+
+DEPENDENCIES:
+  - Expecta
+  - MexbtClient (from `../`)
+  - Specta
+
+EXTERNAL SOURCES:
+  MexbtClient:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Expecta: 54e8a3530add08f4f0208c111355eda7cde74a53
+  MexbtClient: 6b1e1b4c263735bad29ae22b703b45b55542e8cc
+  Specta: cf3e4188cf35375c3ee2cd03f8db8f1f4ef98234
+
+COCOAPODS: 0.38.2

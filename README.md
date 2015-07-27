@@ -1,7 +1,15 @@
-# mexbt-objective-c [![Build Status](https://travis-ci.org/Ahimta/mexbt-objective-c.svg?branch=master)](https://travis-ci.org/Ahimta/mexbt-objective-c)
+# MexbtClient
+
+[![CI Status](http://img.shields.io/travis/Ahimta/MexbtClient.svg?style=flat)](https://travis-ci.org/Abdullah Alansari/MexbtClient)
+[![Version](https://img.shields.io/cocoapods/v/MexbtClient.svg?style=flat)](http://cocoapods.org/pods/MexbtClient)
+[![License](https://img.shields.io/cocoapods/l/MexbtClient.svg?style=flat)](http://cocoapods.org/pods/MexbtClient)
+[![Platform](https://img.shields.io/cocoapods/p/MexbtClient.svg?style=flat)](http://cocoapods.org/pods/MexbtClient)
+
 Objective C client library for the meXBT exchange API
 
 ## Usage
+
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ### Public API
 ```objective-c
@@ -42,7 +50,26 @@ NSInteger orderId = [order[@"serverOrderId"] integerValue];
 [client withdraw:@"BTC" amount:@1.123456 sendToAddress:@"address"];
 ```
 
+## Requirements
+
+## Installation
+
+MexbtClient is available through [CocoaPods](http://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod "MexbtClient"
+```
+
 ## Important Notes
 1. All functions return `(NSDictionary *)` except for `depositAddress` which returns `(NSString *)`.
 2. All functions return `nil` when meXBT API returns with HTTP status code other than `200` or returns non-json or empty response.
 3. All functions assume that meXBT API will respond with the expected format as specified in meXBT APIs documentation: 1)[Public API](http://docs.mexbtpublicapi.apiary.io/#reference/mexbt-exchange-data). 2)[Private API](http://docs.mexbtprivateapi.apiary.io/#), otherwise some exceptions will be thrown; please, keep that in mind when you find some unexpcted behavior in your code.
+
+## Author
+
+Abdullah Alansari, ahimta@gmail.com
+
+## License
+
+MexbtClient is available under the MIT license. See the LICENSE file for more info.

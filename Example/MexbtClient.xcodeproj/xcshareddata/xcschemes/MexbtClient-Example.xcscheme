@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0640"
+   LastUpgradeVersion = "0600"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,23 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B82CB2171B62180700A5C14E"
-               BuildableName = "libMexbtClient.dylib"
-               BlueprintName = "MexbtClient"
-               ReferencedContainer = "container:MexbtClient.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B82CB2221B62180700A5C14E"
-               BuildableName = "MexbtClientTests.xctest"
-               BlueprintName = "MexbtClientTests"
+               BlueprintIdentifier = "6003F589195388D20070C39A"
+               BuildableName = "MexbtClient_Example.app"
+               BlueprintName = "MexbtClient_Example"
                ReferencedContainer = "container:MexbtClient.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B82CB2221B62180700A5C14E"
-               BuildableName = "MexbtClientTests.xctest"
-               BlueprintName = "MexbtClientTests"
+               BlueprintIdentifier = "6003F5AD195388D20070C39A"
+               BuildableName = "MexbtClient_Tests.xctest"
+               BlueprintName = "MexbtClient_Tests"
                ReferencedContainer = "container:MexbtClient.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -56,9 +42,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B82CB2171B62180700A5C14E"
-            BuildableName = "libMexbtClient.dylib"
-            BlueprintName = "MexbtClient"
+            BlueprintIdentifier = "6003F589195388D20070C39A"
+            BuildableName = "MexbtClient_Example.app"
+            BlueprintName = "MexbtClient_Example"
             ReferencedContainer = "container:MexbtClient.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -72,15 +58,16 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B82CB2171B62180700A5C14E"
-            BuildableName = "libMexbtClient.dylib"
-            BlueprintName = "MexbtClient"
+            BlueprintIdentifier = "6003F589195388D20070C39A"
+            BuildableName = "MexbtClient_Example.app"
+            BlueprintName = "MexbtClient_Example"
             ReferencedContainer = "container:MexbtClient.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -90,15 +77,16 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B82CB2171B62180700A5C14E"
-            BuildableName = "libMexbtClient.dylib"
-            BlueprintName = "MexbtClient"
+            BlueprintIdentifier = "6003F589195388D20070C39A"
+            BuildableName = "MexbtClient_Example.app"
+            BlueprintName = "MexbtClient_Example"
             ReferencedContainer = "container:MexbtClient.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
