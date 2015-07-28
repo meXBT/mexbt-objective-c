@@ -1,6 +1,6 @@
 # MexbtClient
 
-[![CI Status](http://img.shields.io/travis/Ahimta/MexbtClient.svg?style=flat)](https://travis-ci.org/Abdullah Alansari/MexbtClient)
+[![CI Status](http://img.shields.io/travis/Ahimta/MexbtClient.svg?style=flat)](https://travis-ci.org/Ahimta/MexbtClient)
 [![Version](https://img.shields.io/cocoapods/v/MexbtClient.svg?style=flat)](http://cocoapods.org/pods/MexbtClient)
 [![License](https://img.shields.io/cocoapods/l/MexbtClient.svg?style=flat)](http://cocoapods.org/pods/MexbtClient)
 [![Platform](https://img.shields.io/cocoapods/p/MexbtClient.svg?style=flat)](http://cocoapods.org/pods/MexbtClient)
