@@ -8,7 +8,7 @@
 
 #import "MexbtClient.h"
 
-#import <IGDigest/NSString+SHA256HMAC.h>
+#import <NSString+SHA256HMAC.h>
 
 @implementation MexbtClient
 
@@ -35,7 +35,7 @@
 
 - (NSDictionary *) modifyOrder:(NSString *)ins serverOrderId:(NSInteger)serverOrderId
                   modifyAction:(NSInteger)modifyAction {
-    
+
     return [self privateRequest:@"orders/modify"
                             req:@{@"ins": ins,
                                   @"serverOrderId": [NSNumber numberWithUnsignedInteger:serverOrderId],
@@ -69,7 +69,7 @@
 }
 
 - (NSDictionary *) accountTrades:(NSString *)ins startIndex:(NSInteger)startIndex count:(NSUInteger)count {
-    
+
     return [self privateRequest:@"trades"
                             req:@{@"ins": ins,
                                   @"startIndex": [NSNumber numberWithInteger:startIndex],
@@ -85,19 +85,19 @@
 }
 
 - (NSString *) depositAddress:(NSString *)ins {
-    
+
     NSDictionary *res = [self depositAddresses];
-    
+
     if (res == nil) { return nil; }
     else {
         NSArray *nameAddressPairs = res[@"addresses"];
-        
+
         NSUInteger index = [nameAddressPairs indexOfObjectPassingTest:^BOOL(id pair, NSUInteger idx, BOOL *stop) {
-            
+
             NSString *name = pair[@"name"];
             return [name isEqualToString:ins];
         }];
-        
+
         if (index == NSNotFound) {
             return nil;
         }
@@ -109,38 +109,38 @@
 }
 
 - (NSDictionary *) withdraw:(NSString *)ins amount:(NSNumber *)amount sendToAddress:(NSString *)address {
-    
+
     NSString *amountFormat = self.isSandbox ? @"%.6f" : @"%.8f";
     NSString *formattedAmount = [NSString stringWithFormat:amountFormat, amount];
-    
+
     return [self privateRequest:@"withdraw"
                             req:@{@"ins": ins, @"amount": formattedAmount, @"sendToAddress": address}];
 }
 
 - (NSDictionary *) privateRequest:(NSString *)endpoint req:(NSDictionary *)req {
-    
+
     NSString *baseUrl = self.isSandbox ? @"https://private-api-sandbox.mexbt.com/v1/"
     : @"https://private-api.mexbt.com/v1/";
-    
+
     NSString *url = [baseUrl stringByAppendingString:endpoint];
-    
+
     return [MexbtClient url:url req:[self sign:req]];
 }
 
 - (NSDictionary *) sign:(NSDictionary *)req {
-    
+
     long long nonce = (long long)([[NSDate date] timeIntervalSince1970] * 1000.0);
-    
+
     NSString *message = [[NSString alloc] initWithFormat:@"%lld%@%@",nonce,self.userId,self.publicKey];
     NSString *key = self.privateKey;
-    
+
     NSString *signature = [message SHA256HMACWithKey:key encoding:NSUTF8StringEncoding];
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithDictionary:req];
-    
+
     dict[@"apiNonce"] = [NSNumber numberWithLongLong:nonce];
     dict[@"apiSig"]   = [signature uppercaseString];
     dict[@"apiKey"]   = self.publicKey;
-    
+
     return dict;
 }
 
@@ -149,7 +149,7 @@
 }
 
 + (NSDictionary *) trades:(NSString *)ins startIndex:(NSInteger)startIndex count:(NSUInteger)count {
-    
+
     return [MexbtClient publicRequest:@"trades"
                                   req:@{@"ins": ins,
                                         @"startIndex": [NSNumber numberWithInteger:startIndex],
@@ -157,7 +157,7 @@
 }
 
 + (NSDictionary *) tradesByDate:(NSString *)ins startDate:(NSUInteger)startDate endDate:(NSUInteger)endDate {
-    
+
     return [MexbtClient publicRequest:@"trades-by-date"
                                   req:@{@"ins": ins,
                                         @"startDate": [NSNumber numberWithUnsignedInteger:startDate],
@@ -174,30 +174,30 @@
 }
 
 + (NSDictionary *)publicRequest:(NSString *)endpoint req:(NSDictionary *)req {
-    
+
     NSString *url = [@"https://public-api.mexbt.com/v1/" stringByAppendingString:endpoint];
     return [MexbtClient url:url req:req];
 }
 
 + (NSDictionary *)url:(NSString *)url req:(NSDictionary *)req {
-    
+
     NSError *error = [[NSError alloc] init];
     NSData *postData = [NSJSONSerialization dataWithJSONObject:req options:0 error:&error];
-    
+
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-    
+
     [request setHTTPMethod: @"POST"];
     [request setURL:[NSURL URLWithString:url]];
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-    
+
     [request setHTTPBody:postData];
     NSHTTPURLResponse *responseCode = nil;
-    
+
     NSData *oResponseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&responseCode error:&error];
-    
+
     NSInteger statusCode = [responseCode statusCode];
-    
+
     if (statusCode != 200) { return nil;                                                                           }
     else                   { return [NSJSONSerialization JSONObjectWithData:oResponseData options:0 error:&error]; }
 }

@@ -14,10 +14,10 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
                        Objective C client library for the meXBT exchange API.
                        DESC
-  s.homepage         = "https://github.com/Ahimta/mexbt-objective-c"
+  s.homepage         = "https://github.com/meXBT/mexbt-objective-c"
   s.license          = 'MIT'
   s.author           = { "Abdullah Alansari" => "ahimta@gmail.com" }
-  s.source           = { :git => "https://github.com/Ahimta/mexbt-objective-c.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/meXBT/mexbt-objective-c.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/Ahymta'
 
   s.platform     = :ios, '7.0'
