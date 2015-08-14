@@ -10,6 +10,7 @@ podfile: Example/Podfile
 before_install:
 - gem install cocoapods # Since Travis is not always on latest version
 - pod install --project-directory=Example
+script: xctool -sdk iphonesimulator -workspace Example/MexbtClient.xcworkspace -scheme MexbtClient-Example build test
 # install:
 # - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
 # script:
