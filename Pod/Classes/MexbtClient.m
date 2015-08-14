@@ -8,7 +8,7 @@
 
 #import "MexbtClient.h"
 
-#import "NSString+SHA256HMAC.h"
+#import <IGDigest/NSString+SHA256HMAC.h>
 
 @implementation MexbtClient
 
