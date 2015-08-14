@@ -8,8 +8,7 @@
 
 #import "MexbtClient.h"
 
-#import <CommonCrypto/CommonHMAC.h>
-#import <string.h>
+#import "NSString+SHA256HMAC.h"
 
 @implementation MexbtClient
 
@@ -130,30 +129,19 @@
 
 - (NSDictionary *) sign:(NSDictionary *)req {
     
-    long nonce = (long)([[NSDate date] timeIntervalSince1970] * 1000.0);
+    long long nonce = (long long)([[NSDate date] timeIntervalSince1970] * 1000.0);
     
-    NSString *message = [[NSString alloc] initWithFormat:@"%ld%@%@",nonce,self.userId,self.publicKey];
+    NSString *message = [[NSString alloc] initWithFormat:@"%lld%@%@",nonce,self.userId,self.publicKey];
+    NSString *key = self.privateKey;
     
-    const char *key  = [self.privateKey cStringUsingEncoding:NSUTF8StringEncoding];
-    const char *data = [message cStringUsingEncoding:NSUTF8StringEncoding];
-    
-    unsigned char cHMAC[CC_SHA256_DIGEST_LENGTH];
-    CCHmac(kCCHmacAlgSHA256, key, strlen(key), data, strlen(data), cHMAC);
-    NSData *sig = [[NSData alloc] initWithBytes:cHMAC length:sizeof(cHMAC)];
-    
-    const unsigned char *buffer = (const unsigned char*)[sig bytes];
-    NSMutableString *s = [NSMutableString stringWithCapacity:sig.length * 2];
-    
-    for (int i = 0; i < sig.length; i++) {
-        [s appendFormat:@"%02x", buffer[i]];
-    }
-    
+    NSString *signature = [message SHA256HMACWithKey:key encoding:NSUTF8StringEncoding];
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithDictionary:req];
+    
     dict[@"apiNonce"] = [NSNumber numberWithLong:nonce];
-    dict[@"apiSig"]   = [s uppercaseString];
+    dict[@"apiSig"]   = [signature uppercaseString];
     dict[@"apiKey"]   = self.publicKey;
     
-    return [[NSDictionary alloc] initWithDictionary:dict];
+    return dict;
 }
 
 + (NSDictionary *) ticker:(NSString *)productPair {
