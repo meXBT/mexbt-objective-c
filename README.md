@@ -60,6 +60,7 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 pod "MexbtClient"
+pod "IGDigest", "~> 1.1"
 ```
 
 ## Important Notes
@@ -76,6 +77,7 @@ This only makes sense when you are working on the lib not when your are using it
 You can do that by adding the following to `Podfile`.
 ```ruby
 pod 'MexbtClient', :git => 'https://github.com/Ahimta/mexbt-objective-c.git'
+pod 'IGDigest', '~> 1.1'
 ```
 
 ```bash
