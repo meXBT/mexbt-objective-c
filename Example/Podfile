@@ -1,0 +1,15 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'MexbtClient_Example', :exclusive => true do
+  pod "MexbtClient", :path => "../"
+
+  pod 'IGDigest', '~> 1.1'
+end
+
+target 'MexbtClient_Tests', :exclusive => true do
+  pod "MexbtClient", :path => "../"
+
+  pod 'Specta'
+  pod 'Expecta'
+end

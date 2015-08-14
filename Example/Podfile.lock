@@ -1,0 +1,23 @@
+PODS:
+  - Expecta (1.0.2)
+  - IGDigest (1.1.2)
+  - MexbtClient (0.0.1)
+  - Specta (1.0.3)
+
+DEPENDENCIES:
+  - Expecta
+  - IGDigest (~> 1.1)
+  - MexbtClient (from `../`)
+  - Specta
+
+EXTERNAL SOURCES:
+  MexbtClient:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Expecta: 54e8a3530add08f4f0208c111355eda7cde74a53
+  IGDigest: 066753c10f3f1b593b00037b9ee93dc96b9e7762
+  MexbtClient: 21c558fac5993c14010ab54304e8250ac01b3a0a
+  Specta: cf3e4188cf35375c3ee2cd03f8db8f1f4ef98234
+
+COCOAPODS: 0.38.2
