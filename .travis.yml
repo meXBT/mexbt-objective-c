@@ -3,7 +3,7 @@
 # * https://github.com/supermarin/xcpretty#usage
 
 language: objective-c
-xcode_workspace: Example/MexbtCient.xcworkspace
+xcode_workspace: Example/MexbtClient.xcworkspace
 xcode_scheme: MexbtClient-Example
 # cache: cocoapods
 # podfile: Example/Podfile
