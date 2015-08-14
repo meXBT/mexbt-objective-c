@@ -137,7 +137,7 @@
     NSString *signature = [message SHA256HMACWithKey:key encoding:NSUTF8StringEncoding];
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithDictionary:req];
     
-    dict[@"apiNonce"] = [NSNumber numberWithLong:nonce];
+    dict[@"apiNonce"] = [NSNumber numberWithLongLong:nonce];
     dict[@"apiSig"]   = [signature uppercaseString];
     dict[@"apiKey"]   = self.publicKey;
     
